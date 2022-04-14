@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/inter-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/inter-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/inter-900.woff2") format("woff2");
+}
+
+:root {
+  --basic-extra-dark: #2d3440;
+  --basic-dark: #565c66;
+  --basic-neutral: #b9b9b9;
+  --basic-light: #e7e7e7;
+  --basic-extra-light: #fcfcfc;
+  --basic-white: #ffffff;
+  --special-extra-bright: #ff2f64;
+  --special-bright: #ff4a78;
+  --special-neutral: #ff7799;
+  --special-light: #feafc3;
+  --special-extra-light: #ffcbd8;
+  --special-blue: #69a9ff;
+  --special-yellow: #fcc850;
+  --status-error: #ea5454;
+  --status-warning: #fd912e;
+  --status-success: #00e484;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--basic-dark);
+  min-width: 1366px;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 1170px;
+}
