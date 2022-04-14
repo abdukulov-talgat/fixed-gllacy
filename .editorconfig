@@ -22,5 +22,8 @@ trim_trailing_whitespace = true
 [*.js]
 indent_size = 4
 
+[*.html]
+insert_final_newline = false
+
 [*.md]
 trim_trailing_whitespace = false
