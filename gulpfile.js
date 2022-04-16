@@ -26,7 +26,7 @@ function watch(cb) {
     gulp.watch(paths.watch.html, html);
     gulp.watch(paths.watch.style, style);
     gulp.watch(paths.watch.images, images);
-    gulp.watch(paths.watch.svgSprite, svgSprite);
+    gulp.watch(paths.watch.sprite, svgSprite);
     gulp.watch(paths.watch.js, js);
 
     cb();

@@ -39,7 +39,7 @@ const paths = {
             `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
             `!${srcFolder}/img/icons/**`
         ],
-        svgSprite: `${srcFolder}/img/icons/**/*.svg`
+        sprite: `${srcFolder}/img/icons/**/*.svg`
     }
 };
 
