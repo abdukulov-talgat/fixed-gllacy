@@ -1,4 +1,5 @@
 {
+  "ignoreFiles": "./dist/**",
   "extends": ["stylelint-config-idiomatic-order", "stylelint-config-standard-scss"],
   "plugins": [
     "stylelint-scss",
