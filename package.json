@@ -5,9 +5,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gulp",
-    "build": "gulp build --build"
+    "dev": "gulp build",
+    "build": "gulp build --build",
+    "serve": "gulp"
   },
   "author": "https://github.com/abdukulov-talgat/",
   "license": "ISC",
@@ -21,16 +21,21 @@
     "gulp-file-include": "^2.3.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^8.0.0",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.1.3",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^1.5.0",
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^4.0.1",
+    "gulp-webp": "^4.0.1",
     "sass": "^1.50.0",
-    "stylelint": "^14.6.1"
+    "stylelint": "^14.6.1",
+    "webpack": "^5.72.0",
+    "webpack-stream": "^7.0.0"
   },
   "browserslist": [
     "last 3 versions",

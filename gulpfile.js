@@ -7,16 +7,17 @@ import fonts from './gulp/tasks/fonts.js';
 import html from './gulp/tasks/html.js';
 import style from './gulp/tasks/style.js';
 import server from './gulp/tasks/server.js';
-
-
+import images from './gulp/tasks/images.js';
+import svgSprite from './gulp/tasks/svgSprite.js';
+import js from './gulp/tasks/js.js';
 
 
 global.app = {
     browserSync: browserSync.create(),
     isDev: !process.argv.includes('--build'),
     isBuild: process.argv.includes('--build'),
+    paths: paths,
 };
-
 
 
 
@@ -24,10 +25,12 @@ function watch(cb) {
     gulp.watch(paths.watch.files, copy);
     gulp.watch(paths.watch.html, html);
     gulp.watch(paths.watch.style, style);
+    gulp.watch(paths.watch.images, images);
+    gulp.watch(paths.watch.svgSprite, svgSprite);
+    gulp.watch(paths.watch.js, js);
 
     cb();
 }
-
 
 
 
@@ -35,7 +38,10 @@ const mainTasks = gulp.parallel(
     copy,
     fonts,
     html,
-    style
+    style,
+    images,
+    svgSprite,
+    js
 );
 
 const build = gulp.series(clean, mainTasks);
@@ -43,5 +49,6 @@ const serve = gulp.series(build, server, watch);
 
 
 
-export { dev };
-export default dev;
+export { build };
+export default serve;
+

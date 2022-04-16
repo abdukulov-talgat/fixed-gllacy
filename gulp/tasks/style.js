@@ -10,13 +10,12 @@ import sourcemaps from 'gulp-sourcemaps';
 import cleanCSS from 'gulp-clean-css';
 import rename from 'gulp-rename';
 import gulpif from 'gulp-if';
-import paths from '../config/paths.js';
 const sass = gulpSass(dartSass);
 
 
 
 function styles() {
-    return gulp.src(paths.src.style)
+    return gulp.src(app.paths.src.style)
         .pipe(plumber(
             notify.onError({
                 title: 'SCSS',
@@ -27,13 +26,13 @@ function styles() {
         .pipe(sass())
         .pipe(groupCssMediaQueries())
         .pipe(autorprefixer())
-        .pipe(gulp.dest(paths.build.style))
+        .pipe(gulp.dest(app.paths.build.style))
         .pipe(cleanCSS())
         .pipe(rename({
             extname: '.min.css'
         }))
         .pipe(gulpif(app.isDev, sourcemaps.write()))
-        .pipe(gulp.dest(paths.build.style))
+        .pipe(gulp.dest(app.paths.build.style))
         .pipe(app.browserSync.stream());
 }
 

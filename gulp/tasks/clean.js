@@ -1,8 +1,8 @@
 import del from 'del';
-import paths from '../config/paths.js';
+
 
 function clean() {
-    return del(paths.cleanFolder);
+    return del(app.paths.cleanFolder);
 }
 
 

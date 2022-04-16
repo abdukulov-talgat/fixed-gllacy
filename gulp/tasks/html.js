@@ -3,13 +3,13 @@ import fileinclude from 'gulp-file-include';
 import replace from 'gulp-replace';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
-import paths from '../config/paths.js';
+
 
 
 
 
 function html() {
-    return gulp.src(paths.src.html)
+    return gulp.src(app.paths.src.html)
         .pipe(plumber(
             notify.onError({
                 title: 'HTML',
@@ -17,7 +17,13 @@ function html() {
             })))
         .pipe(fileinclude())
         .pipe(replace(/@img\//g, 'img/'))
-        .pipe(gulp.dest(paths.build.html))
+        // .pipe(replace(
+        //     /(@scss\/).*(\.scss)/g,
+        //     function replacer(match, p1, p2) {
+        //         return match.replace(p1, 'css/').replace(p2, '.css');
+        //     }))
+        // .pipe(replace(/@js\//g, 'js/'))
+        .pipe(gulp.dest(app.paths.build.html))
         .pipe(app.browserSync.stream());
 }
 
