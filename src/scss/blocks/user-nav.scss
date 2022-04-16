@@ -1,0 +1,65 @@
+.user-nav {
+  @include reset-list;
+
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+
+  &__item:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__link {
+    @include signature;
+
+    display: block;
+    padding: 6px 16px;
+    padding-left: 40px;
+    border: 0;
+    background-color: transparent;
+    background-color: rgba($basic-extra-light, 0.3);
+    background-repeat: no-repeat;
+    border-radius: 26px;
+    color: $basic-extra-dark;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+
+    &:hover {
+      background-color: rgba($basic-extra-light, 0.5);
+    }
+
+    &:focus {
+      background-color: rgba($basic-extra-light, 0.5);
+      outline: 2px solid $basic-extra-dark;
+      outline-offset: -2px;
+    }
+
+    &:active {
+      background-color: $basic-extra-light;
+      outline: none;
+    }
+
+    &--search {
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      background-image: url("@img/icons/icons.svg#search");
+      background-position: center;
+      background-size: 15px;
+      border-radius: 50%;
+    }
+
+    &--login {
+      background-image: url("@img/icons/icons.svg#login");
+      background-position: 16px 7px;
+      background-size: 18px;
+    }
+
+    &--cart {
+      background-image: url("@img/icons/icons.svg#cart");
+      background-position: 16px 7px;
+      background-size: 18px;
+    }
+  }
+}

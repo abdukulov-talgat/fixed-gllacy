@@ -10,6 +10,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import cleanCSS from 'gulp-clean-css';
 import rename from 'gulp-rename';
 import gulpif from 'gulp-if';
+import debug from 'gulp-debug';
 const sass = gulpSass(dartSass);
 
 
@@ -22,8 +23,8 @@ function styles() {
                 message: 'Error: <%= error.message %>'
             })))
         .pipe(gulpif(app.isDev, sourcemaps.init()))
-        .pipe(replace(/@img\//g, '../img/'))
         .pipe(sass())
+        .pipe(replace(/@img\//g, '../img/'))
         .pipe(groupCssMediaQueries())
         .pipe(autorprefixer())
         .pipe(gulp.dest(app.paths.build.style))

@@ -1,3 +1,7 @@
-@import 'fonts.scss';
-@import 'variables.scss';
-@import 'common.scss';
+@import "./fonts";
+@import "./variables";
+@import "./mixins";
+@import "./common";
+@import "./blocks/site-nav";
+@import "./blocks/user-nav";
+@import "./blocks/header"

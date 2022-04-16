@@ -1,17 +1,17 @@
 html {
-  box-sizing: border-box;
   height: 100%;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
-  color: $basicDark;
   min-width: 1366px;
   height: 100%;
+  margin: 0;
+  color: $basic-dark;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
 }
 
 *,
@@ -22,73 +22,20 @@ body {
 
 .visually-hidden {
   position: absolute;
+  overflow: hidden;
   width: 1px;
   height: 1px;
-  margin: -1px;
-  border: 0;
   padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
+  border: 0;
+  margin: -1px;
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  clip-path: inset(100%);
+  white-space: nowrap;
 }
 
 .wrapper {
+  display: flex;
   width: 1170px;
-}
-
-.h1 {
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 46px;
-  color: $basicExtraDark;
-}
-
-.h2 {
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 46px;
-  color: $basicExtraDark;
-}
-
-.h3 {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  color: $basicExtraDark;
-}
-
-.h4 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  color: $basicExtraDark;
-}
-
-.h5 {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  color: $basicExtraDark;
-}
-
-.p1 {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-@media (min-width: 768px) {
-  h1 {
-    color: green;
-  }
-}
-
-p {
-  margin: 0;
-}
-@media (min-width: 768px) {
-  h1 {
-    font-size: 2em;
-  }
+  flex-direction: column;
+  margin: 0 auto;
 }
