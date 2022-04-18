@@ -1,8 +1,4 @@
-import {foo, sum} from './another.js';
+import popups from './popups.js';
 
 
-foo();
-
-
-sum(2, 3);
-sum(2, 55);
+popups();
