@@ -15,14 +15,33 @@
       <img class="header__logo-img" src="img/site-logo.svg" width="137" height="56" alt="Логотип Глейси">
     </a>
     <ul class="site-nav header__site-nav">
-      <li class="site-nav__item">
+      <li class="site-nav__item site-nav__item--submenu">
         <a class="site-nav__link" href="catalog.html">Каталог</a>
+        <div class="site-nav__sub">
+          <ul class="site-nav__sub-list">
+            <li class="site-nav__sub-item">
+              <a class="site-nav__sub-link site-nav__sub-link--bold" href="#">Новинки</a>
+            </li>
+            <li class="site-nav__sub-item">
+              <a class="site-nav__sub-link" href="#">Сливочное</a>
+            </li>
+            <li class="site-nav__sub-item">
+              <a class="site-nav__sub-link" href="#">Щербеты</a>
+            </li>
+            <li class="site-nav__sub-item">
+              <a class="site-nav__sub-link" href="#">Фруктовый лед</a>
+            </li>
+            <li class="site-nav__sub-item">
+              <a class="site-nav__sub-link" href="#">Мелорин</a>
+            </li>
+          </ul>
+        </div>
       </li>
       <li class="site-nav__item">
-        <a class="site-nav__link" href="catalog.html">Доставка и оплата</a>
+        <a class="site-nav__link" href="#">Доставка и оплата</a>
       </li>
       <li class="site-nav__item">
-        <a class="site-nav__link" href="catalog.html">О компании</a>
+        <a class="site-nav__link" href="#">О компании</a>
       </li>
     </ul>
     <div class="header__column">
@@ -30,12 +49,72 @@
       <ul class="user-nav">
         <li class="user-nav__item">
           <button class="user-nav__link user-nav__link--search" type="button" aria-label="Поиск по сайту"></button>
+          <div class="popup popup-search">
+            <form class="popup-search__form" action="https://echo.htmlacademy.ru" method="get">
+              <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+              <div class="popup-search__box">
+                <input class="popup-search__input" type="text" name="query" id="search-field" placeholder="Поиск по сайту">
+                <button class="popup-search__clear" aria-label="Очистить поле поиска" tabindex="-1"></button>
+              </div>
+              <button class="visually-hidden" type="submit">Отправить</button>
+            </form>
+          </div>
         </li>
         <li class="user-nav__item">
           <button class="user-nav__link user-nav__link--login" type="button">Вход</button>
+          <div class="popup popup-login">
+            <div class="popup-login__box">
+              <b class="popup-login__title">Личный кабинет</b>
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <input class="input popup-login__input" type="email" placeholder="Ваш e-mail" name="email" aria-label="Ваш e-mail" value="email@example.com">
+                <input class="input popup-login__input" type="password" placeholder="Ваш пароль" name="password" aria-label="Ваш пароль" value="123456">
+                <div class="popup-login__group">
+                  <button class="button2 popup-login__button" type="submit">Войти</button>
+                  <div class="popup-login__column">
+                    <a class="popup-login__link" href="#">Забыли пароль?</a>
+                    <a class="popup-login__link" href="#">Регистрация</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </li>
         <li class="user-nav__item">
           <button class="user-nav__link user-nav__link--cart" type="button" aria-label="Корзина с товарами">Пусто</button>
+          <div class="popup popup-cart">
+            <div class="popup-cart__box">
+              <b class="popup-cart__empty" style="display: none;">Ваша корзина пока пуста</b>
+              <b class="popup-cart__title">Корзина</b>
+              <ul class="popup-cart__list">
+                <li class="popup-cart__item">
+                  <a class="popup-cart__link-img" href="#">
+                    <img class="popup-cart__img" src="img/products/product-1.jpg" width="46" height="46" alt>
+                  </a>
+                  <div class="popup-cart__column">
+                    <a class="popup-cart__link" href="#">Малинка</a>
+                    <span class="popup-cart__quantity">1 кг х 310 ₽</span>
+                  </div>
+                  <b class="popup-cart__price">310 ₽</b>
+                  <button class="popup-cart__delete" type="button" aria-label="Удалить из корзины"></button>
+                </li>
+                <li class="popup-cart__item">
+                  <a class="popup-cart__link-img" href="#">
+                    <img class="popup-cart__img" src="img/products/product-4.jpg" width="46" height="46" alt>
+                  </a>
+                  <div class="popup-cart__column">
+                    <a class="popup-cart__link" href="#">Бабл-гам</a>
+                    <span class="popup-cart__quantity">1,5 кг х 320 ₽</span>
+                  </div>
+                  <b class="popup-cart__price">480 ₽</b>
+                  <button class="popup-cart__delete" type="button" aria-label="Удалить из корзины"></button>
+                </li>
+              </ul>
+              <div class="popup-cart__group">
+                <a class="button2 popup-cart__button" href="#">Оформить заказ</a>
+                <b class="popup-cart__total">Итого: 790 ₽</b>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
