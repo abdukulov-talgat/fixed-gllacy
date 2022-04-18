@@ -1,0 +1,259 @@
+.popup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+}
+
+.popup-search {
+  &__form {
+    @include shadow-medium;
+
+    width: 356px;
+    padding: 24px 16px;
+    margin-top: 8px;
+    background-color: $basic-extra-light;
+    border-radius: 4px;
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__input {
+    @include p3;
+
+    display: block;
+    width: 100%;
+    padding: 13px 15px;
+    padding-right: 40px;
+    border: 1px solid $basic-neutral;
+    background-color: $basic-white;
+    border-radius: 4px;
+    color: $basic-extra-dark;
+    font-family: inherit;
+    outline: none;
+  }
+
+  &__clear {
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    background-image: url("@img/icons/icons.svg#cross");
+    cursor: pointer;
+    opacity: 0.4;
+    outline: none;
+  }
+
+  &__clear:hover {
+    opacity: 1;
+  }
+
+  /* Not standart, doesn't work at well */
+  // &__input::-webkit-search-cancel-button {
+  //   // appearance: none;
+  //   cursor: pointer;
+  // }
+}
+
+.popup-login {
+  &__box {
+    @include shadow-big;
+
+    width: 420px;
+    padding: 48px;
+    margin-top: 8px;
+    background-color: $basic-extra-light;
+    border-radius: 4px;
+  }
+
+  &__title {
+    @include h3;
+
+    display: block;
+    margin-bottom: 32px;
+    color: $basic-extra-dark;
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__input:last-of-type {
+    margin-bottom: 32px;
+  }
+
+  &__group {
+    display: flex;
+  }
+
+  &__button {
+    min-width: 113px;
+    margin-right: 23px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__link {
+    @include signature;
+
+    position: relative;
+    margin-bottom: 4px;
+    color: $basic-extra-dark;
+    text-decoration: none;
+  }
+
+  &__link:last-child {
+    margin-bottom: 0;
+  }
+
+  &__link::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: $basic-extra-dark;
+    content: "";
+  }
+}
+
+.popup-cart {
+  &__box {
+    @include shadow-big;
+
+    min-width: 288px;
+    padding: 48px;
+    margin-top: 8px;
+    background-color: $basic-extra-light;
+    border-radius: 4px;
+  }
+
+  &__empty {
+    @include h3;
+
+    display: block;
+    color: $basic-extra-dark;
+    text-align: center;
+  }
+
+  &__title {
+    @include h3;
+
+    display: block;
+    margin-bottom: 32px;
+    color: $basic-extra-dark;
+  }
+
+  &__list {
+    @include reset-list;
+
+    width: 345px;
+    padding-bottom: 31px;
+    border-bottom: 1px solid $basic-light;
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    display: grid;
+    align-items: center;
+    margin-bottom: 24px;
+    column-gap: 16px;
+    grid-template-columns: 46px auto 87px 16px;
+    justify-items: start;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__link-img {
+    border-radius: 50%;
+    outline-color: $basic-extra-dark;
+    outline-offset: 0;
+  }
+
+  &__link-img:hover {
+    opacity: 0.6;
+  }
+
+  &__img {
+    display: block;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
+  &__link {
+    @include h6;
+
+    display: block;
+    color: $basic-extra-dark;
+    outline-color: $basic-extra-dark;
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    opacity: 0.6;
+  }
+
+  &__quantity {
+    @include signature;
+
+    display: block;
+    margin-top: 4px;
+    color: $basic-neutral;
+  }
+
+  &__price {
+    @include h6;
+
+    color: $basic-extra-dark;
+  }
+
+  &__delete {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    background-image: url("@img/icons/icons.svg#cross");
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+    outline-color: $basic-extra-dark;
+    outline-offset: 4px;
+  }
+
+  &__delete:hover {
+    opacity: 0.6;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__button {
+    min-width: 198px;
+  }
+
+  &__total {
+    @include h6;
+
+    margin-top: 3px;
+    color: $basic-extra-dark;
+  }
+}

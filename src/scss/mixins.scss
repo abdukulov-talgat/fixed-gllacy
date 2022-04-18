@@ -23,6 +23,12 @@
 }
 
 @mixin h5 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+@mixin h6 {
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
@@ -87,4 +93,36 @@
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+@mixin button {
+  display: inline-block;
+  min-width: 131px;
+  padding: 12px;
+  border: 0;
+  border-radius: 26px;
+  cursor: pointer;
+  font-family: inherit;
+  outline-offset: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+@mixin spinner {
+  position: relative;
+  padding-right: 48px;
+
+  &::after {
+    position: absolute;
+    top: 14px;
+    right: 32px;
+    width: 16px;
+    height: 16px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: "spinner";
+    animation-timing-function: linear;
+    border-radius: 50%;
+    content: "";
+  }
 }

@@ -5,8 +5,12 @@
   flex-shrink: 0;
   flex-wrap: wrap;
 
+  &__item {
+    position: relative;
+  }
+
   &__item:not(:last-child) {
-    margin-right: 16px;
+    margin-right: 17px;
   }
 
   &__link {
@@ -35,9 +39,14 @@
       outline-offset: -2px;
     }
 
-    &:active {
+    &:active,
+    &--active {
       background-color: $basic-extra-light;
       outline: none;
+    }
+
+    &--active + .popup {
+      display: block;
     }
 
     &--search {

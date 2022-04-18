@@ -39,3 +39,120 @@ body {
   flex-direction: column;
   margin: 0 auto;
 }
+
+.input {
+  @include p3;
+
+  padding: 13px 15px;
+  border: 1px solid $basic-neutral;
+  background-color: $basic-white;
+  border-radius: 4px;
+  color: $basic-extra-dark;
+  font-family: inherit;
+  outline: none;
+  outline-offset: -2px;
+
+  &::placeholder {
+    color: $basic-neutral;
+  }
+
+  &:hover {
+    border-color: $basic-extra-dark;
+  }
+
+  &:focus {
+    outline: 2px solid $basic-extra-dark;
+  }
+
+  &--error {
+    border-color: $status-error;
+  }
+
+  &--error:hover {
+    outline: 2px solid $status-error;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    border-color: $basic-neutral;
+    background-color: $basic-light;
+  }
+}
+
+.button {
+  @include p3-bold;
+  @include shadow-small;
+  @include button;
+
+  background-color: $basic-extra-light;
+  color: $basic-extra-dark;
+  outline: 4px solid rgba($basic-extra-light, 0.4);
+
+  &:hover {
+    background-color: rgba($basic-extra-light, 0.4);
+    outline: 4px solid $basic-extra-light;
+  }
+
+  &:focus {
+    outline: 2px solid $basic-extra-dark;
+  }
+
+  &:active {
+    background-color: rgba($basic-extra-light, 0.7);
+  }
+
+  &:disabled {
+    background-color: $basic-light;
+    color: $basic-neutral;
+    font-weight: 400;
+    outline: 4px solid rgba($basic-extra-light, 0.4);
+  }
+
+  &--spinner {
+    @include spinner;
+  }
+
+  &--spinner::after {
+    border: 2px solid rgba($basic-extra-dark, 0.24);
+    border-right-color: $basic-extra-dark;
+  }
+}
+
+.button2 {
+  @include p3-bold;
+  @include shadow-small;
+  @include button;
+
+  background-color: $special-extra-bright;
+  color: $basic-extra-light;
+  outline: 4px solid rgba($special-extra-bright, 0.3);
+
+  &:hover {
+    background-color: rgba($basic-extra-light, 0.3);
+    color: $basic-extra-dark;
+    outline-color: $special-extra-bright;
+  }
+
+  &:focus {
+    outline: 2px solid $basic-extra-dark;
+  }
+
+  &:active {
+    background-color: rgba($special-extra-bright, 0.7);
+  }
+
+  &:disabled {
+    background-color: $basic-neutral;
+    color: $basic-dark;
+    outline: 4px solid rgba($basic-neutral, 0.3);
+  }
+
+  &--spinner {
+    @include spinner;
+  }
+
+  &--spinner::after {
+    border: 2px solid rgba($basic-extra-light, 0.25);
+    border-right-color: $basic-extra-light;
+  }
+}
