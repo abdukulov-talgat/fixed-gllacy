@@ -1,0 +1,37 @@
+.social {
+  @include reset-list;
+
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, 24px);
+
+  &__link {
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    fill: $basic-extra-light;
+    outline: 2px solid rgba($basic-extra-light, 0.2);
+    outline-offset: 0;
+
+    svg {
+      display: block;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      height: 50%;
+      background-color: $basic-extra-dark;
+      content: "";
+      transform: translate(-50%, -50%);
+    }
+
+    &:focus {
+      outline-color: $basic-extra-dark;
+    }
+  }
+}

@@ -30,15 +30,8 @@ const swiperThumb = new Swiper('.swiper-thumb', {
     slideActiveClass: 'swiper-thumb__slide--active'
 });
 
-swiper.controller.control =swiperThumb;
+swiper.controller.control = swiperThumb;
 
-// swiper.on('slideNextTransitionStart', function (swiper) {
-//     swiperThumb.slideNext();
-// });
-
-// swiper.on('slidePrevTransitionStart', function (swiper) {
-//     swiperThumb.slidePrev();
-// });
 
 swiper.on('slideChangeTransitionEnd', function (swiper) {
     setContent(

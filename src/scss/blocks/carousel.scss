@@ -1,12 +1,10 @@
 .carousel {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 26px;
+  display: grid;
   color: $basic-extra-dark;
+  grid-template-columns: 540px 630px;
 
   &__сolumn {
-    width: 540px;
     padding-top: 115px;
     padding-right: 20px;
     padding-left: 70px;
@@ -34,10 +32,14 @@
 
   &__slider {
     display: flex;
-    width: 630px;
     height: 507px;
     justify-content: space-between;
     padding-left: 2px;
+  }
+
+  &__social {
+    justify-content: end;
+    margin-top: 2px;
   }
 }
 
@@ -101,10 +103,8 @@ div.swiper-wrapper {
 }
 
 .swiper-pagination {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   display: grid;
+  margin-top: 14px;
   gap: 8px;
   grid-template-columns: repeat(8, 12px);
 }
