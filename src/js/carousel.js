@@ -3,9 +3,7 @@ const container = document.querySelector('.carousel__container');
 const prev = document.querySelector('.carousel__arrow--prev');
 const next = document.querySelector('.carousel__arrow--next');
 
-const title = document.querySelector('.carousel__title');
-const text = document.querySelector('.carousel__text');
-const link = document.querySelector('.carousel__link');
+
 
 const offsetPerSlide = 100 + 41; // width + margin
 const slides = container.children;
@@ -21,27 +19,42 @@ next.addEventListener('click', () => {
 });
 
 
+
+// let clones = [];
+// for (let i = 0; i < container.children.length; i++)
+//     clones.push(container.children[i].cloneNode(true));
+
+// for (let i = 0; i < clones.length; i++) {
+//     container.prepend(clones[i].cloneNode(true));
+//     container.appendChild(clones[i].cloneNode(true));
+// }
+
+
+
 function previousSlide() {
-    const removed = container.removeChild(container.lastElementChild);
-    container.firstElementChild.classList.remove(activeSlideClass);
-    removed.classList.add(activeSlideClass);
-    container.prepend(removed);
+    // container.firstElementChild.classList.remove(activeSlideClass);
+    // const removed = container.removeChild(container.lastElementChild);
+    // removed.classList.add(activeSlideClass);
+    // container.prepend(removed);
+
+    // setContent(removed.dataset.title, removed.dataset.text, removed.dataset.link, removed.dataset.color);
 }
 
 function nextSlide() {
-    const removed = container.removeChild(container.firstElementChild);
-    container.firstElementChild.classList.add(activeSlideClass);
-    removed.classList.remove(activeSlideClass);
-    container.appendChild(removed);
+    container.children[currentIndex].classList.remove(activeSlideClass);
+
+    currentIndex = (currentIndex + 1) > (container.children.length - 1) ? 0 : currentIndex + 1;
+    container.children[currentIndex].classList.add(activeSlideClass);
+    pushClones();
+
+    container.style.transform = `translateX(${-offsetPerSlide * currentIndex}px)`
 }
 
-function setSlide() {
+
+
+function pushClones() {
 
 }
-
-
-
-
 
 
 
