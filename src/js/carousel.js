@@ -21,38 +21,22 @@ next.addEventListener('click', () => {
 });
 
 
-
-function getCurrentOffset(){
-    let str = container.style.transform;
-    const reg = new RegExp(/translateX\((-?\d*)px\)/);
-
-    let result = reg.exec(str);
-    console.log(result);
-    if(result && result.length > 1)
-        return +result[1];
-    return 0;
-
+function previousSlide() {
+    const removed = container.removeChild(container.lastElementChild);
+    container.firstElementChild.classList.remove(activeSlideClass);
+    removed.classList.add(activeSlideClass);
+    container.prepend(removed);
 }
 
-
-function previousSlide(){
-    slides[currentIndex].classList.remove(activeSlideClass);
-    currentIndex = currentIndex > 0 ? currentIndex - 1 : slides.length - 1;
-
-    setSlide();
+function nextSlide() {
+    const removed = container.removeChild(container.firstElementChild);
+    container.firstElementChild.classList.add(activeSlideClass);
+    removed.classList.remove(activeSlideClass);
+    container.appendChild(removed);
 }
 
-function nextSlide(){
+function setSlide() {
 
-    slides[currentIndex].classList.remove(activeSlideClass);
-    currentIndex = currentIndex < slides.length - 1 ? currentIndex + 1 : 0;
-
-    setSlide();
-}
-
-function setSlide(){
-    slides[currentIndex].classList.add(activeSlideClass);
-    container.style.transform = `translateX(${-offsetPerSlide * currentIndex}px)`;
 }
 
 
