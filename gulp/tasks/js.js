@@ -9,7 +9,7 @@ function js() {
     return gulp.src(app.paths.src.js)
         .pipe(plumber(
             notify.onError({
-                title: 'SCSS',
+                title: 'JS',
                 message: 'Error: <%= error.message %>'
             })))
         .pipe(webpack({
@@ -17,6 +17,14 @@ function js() {
             devtool: 'source-map',
             output: {
                 filename: 'script.min.js',
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.css$/i,
+                        use: ["style-loader", "css-loader"],
+                    },
+                ],
             }
         }))
         .pipe(gulp.dest(app.paths.build.js))

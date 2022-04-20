@@ -4,7 +4,42 @@
 
 <body style="background-color: #feafc3">
   <div class="wrapper">
+    <h1 class="visually-hidden">Глейси - онлайн и офлайн магазин мороженого</h1>
     @@include('./includes/header.html')
+    <section class="carousel">
+      <div class="carousel__сolumn">
+        <h2 class="carousel__title">Нежный пломбир <br>с клубничным джемом</h2>
+        <p class="carousel__text">Натуральное мороженое из свежих сливок <br>и молока с вкуснейшим клубничным джемом<br> – это идеальный десерт для всей семьи.</p>
+        <a class="carousel__link button" href="#">Заказать</a>
+      </div>
+      <!-- Slider -->
+      <div class="carousel__slider">
+        <div class="carousel__container">
+          <!-- Slides -->
+          <div class="carousel__slide carousel__slide--active"><a href="#" tabindex="-1"><img src="@img/slider/icecream-1.png" width="312" height="507" alt></a></div>
+          <div class="carousel__slide"><a href="#" tabindex="-1"><img src="@img/slider/icecream-2.png" width="312" height="507" alt></a></div>
+          <div class="carousel__slide"><a href="#" tabindex="-1"><img src="@img/slider/icecream-3.png" width="312" height="507" alt></a></div>
+        </div>
+        <!-- If we need navigation buttons -->
+
+        <button class="carousel__arrow carousel__arrow--next">
+          <svg width="16" height="16">
+            <use xlink:href="@img/icons/icons.svg#arrow" />
+          </svg>
+        </button>
+        <button class="carousel__arrow carousel__arrow--prev">
+          <svg width="16" height="16">
+            <use xlink:href="@img/icons/icons.svg#arrow" />
+          </svg>
+        </button>
+
+      </div>
+      <div class="carousel__pagination">
+        <button class="carousel__pagination-button carousel__pagination-button--active" type="button" aria-label="Первый Слайд"></button>
+        <button class="carousel__pagination-button" type="button" aria-label="Второй Слайд"></button>
+        <button class="carousel__pagination-button" type="button" aria-label="Третий Слайд"></button>
+      </div>
+    </section>
   </div>
   <script src="js/script.min.js"></script>
 </body>
