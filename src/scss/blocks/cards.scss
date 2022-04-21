@@ -1,0 +1,114 @@
+.cards {
+  @include reset-list;
+
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, 270px);
+
+  &__item {
+    position: relative;
+    padding-top: 51px;
+    text-align: center;
+  }
+
+  &__container {
+    padding: 133px 40px 24px;
+    background-color: $basic-extra-light;
+    border-radius: 8px;
+  }
+
+  &__img-link {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    outline: none;
+    transform: translateX(-50%);
+    transition: transform 0.4s;
+
+    &:hover {
+      transform: translateX(-50%) scale(1.1);
+    }
+
+    &:focus img {
+      outline: 2px solid $basic-extra-dark;
+      outline-offset: -2px;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
+  &__link {
+    display: block;
+    color: $basic-extra-dark;
+    outline: none;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $special-extra-bright;
+    }
+  }
+
+  &__title {
+    @include h4;
+
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  &__price {
+    @include h4;
+
+    color: $basic-extra-dark;
+  }
+
+  &__button {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border: 2px solid $special-extra-bright;
+    background-color: $special-extra-bright;
+    border-radius: 50%;
+    fill: $basic-extra-light;
+    outline: none;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      margin: auto;
+    }
+
+    &:hover {
+      background-color: transparent;
+      fill: $basic-extra-dark;
+    }
+
+    &:focus {
+      border-color: $basic-extra-dark;
+    }
+
+    &:active {
+      border-color: $basic-neutral;
+      background-color: $basic-neutral;
+    }
+  }
+}
