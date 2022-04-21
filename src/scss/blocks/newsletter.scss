@@ -1,0 +1,32 @@
+.newsletter {
+  width: 570px;
+  padding: 6px;
+  background-image: url("@img/bg-newsletter.jpg");
+  border-radius: 16px;
+
+  &__container {
+    padding: 26px;
+    background-color: $basic-extra-light;
+    border-radius: 16px;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 42px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__input {
+    min-width: 332px;
+  }
+
+  &__button {
+    min-width: 152px;
+    margin-right: -2px;
+  }
+}

@@ -169,3 +169,38 @@ body {
 .popular {
   margin-bottom: 80px;
 }
+
+.index-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news {
+  width: 570px;
+  min-height: 220px;
+  padding: 32px;
+  padding-right: 235px;
+  background-color: #fff;
+  background-image: url("@img/bg-news.jpg");
+  background-position: 0 -108px;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+
+  &__hint {
+    @include p3;
+
+    margin: 0;
+    margin-bottom: 14px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__link {
+    @include h3;
+
+    color: $basic-extra-dark;
+    text-decoration: none;
+  }
+}
