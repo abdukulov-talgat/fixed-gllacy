@@ -16,6 +16,9 @@ function sprite() {
         // .pipe(replace(/fill\s*=\s*["']?[#a-f0-9no]*["']?/gi, ''))
         // .pipe(replace(/stroke\s*=\s*["']?[#a-f0-9no]*["']?/gi, ''))
         .pipe(svgSprite({
+            // svg: {
+            //     precision: 4,
+            // },
             mode: {
                 stack: {
                     sprite: `../icons/icons.svg`,

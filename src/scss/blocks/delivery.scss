@@ -1,0 +1,135 @@
+.delivery {
+  display: flex;
+  justify-content: space-between;
+  padding: 64px;
+  padding-left: 100px;
+  margin-bottom: 80px;
+  background-color: $basic-extra-light;
+  background-image: url("@img/bg-delivery.jpg");
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+
+  &__container {
+    width: 380px;
+    padding-top: 104px;
+  }
+
+  &__title {
+    @include h2;
+
+    margin: 0;
+    margin-bottom: 23px;
+    color: $basic-extra-dark;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__form-wrapper {
+    @include shadow-big;
+
+    width: 500px;
+    padding: 40px;
+    padding-bottom: 42px;
+    background: $basic-extra-light;
+    border-radius: 8px;
+  }
+
+  &__form-text {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  &__form {
+    display: grid;
+    gap: 20px 16px;
+    grid-template-columns: 117px 287px;
+  }
+
+  &__group {
+    &--big {
+      grid-column: 1/-1;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  &__label {
+    @include p3-bold;
+
+    margin-right: 5px;
+    color: $basic-extra-dark;
+  }
+
+  &__button {
+    min-width: 152px;
+    margin: 0 auto;
+    margin-top: 12px;
+    grid-column: 1/-1;
+  }
+
+  input {
+    width: 100%;
+  }
+}
+
+.tooltip {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: url("@img/icons/icons.svg#info");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: help;
+
+  &__text {
+    @include shadow-small;
+    @include signature2;
+
+    position: absolute;
+    top: -13px;
+    left: calc(100% + 7px);
+    display: none;
+    min-width: 169px;
+    padding: 10px 8px;
+    border: 1px solid $basic-neutral;
+    background-color: $basic-extra-light;
+    border-radius: 1px;
+  }
+
+  &:hover &__text,
+  &:focus &__text {
+    display: block;
+  }
+
+  &__text::before {
+    position: absolute;
+    top: 11px;
+    left: -7px;
+    width: 9px;
+    height: 16px;
+    background-image: url("@img/triangle.svg");
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &__text::after {
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 2px;
+    height: 16px;
+    background-color: $basic-extra-light;
+    content: "";
+  }
+}
