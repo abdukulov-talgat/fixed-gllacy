@@ -156,3 +156,12 @@ body {
     border-right-color: $basic-extra-light;
   }
 }
+
+.index-title {
+  @include h2;
+
+  margin: 0;
+  margin-bottom: 55px;
+  color: $basic-extra-dark;
+  text-align: center;
+}

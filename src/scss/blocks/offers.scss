@@ -1,0 +1,42 @@
+.offers {
+  margin-bottom: 81px;
+
+  &__list {
+    @include reset-list;
+
+    display: grid;
+    color: $basic-extra-dark;
+    gap: 30px;
+    grid-template-columns: repeat(2, 570px);
+  }
+
+  &__item {
+    padding: 41px 209px 40px 40px;
+    background-color: $special-neutral;
+    background-image: url("@img/raspberry.png");
+    background-position: top 28px right 15px;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+
+    &--marshmallows {
+      background-image: url("@img/marshmallows.png");
+      background-position: top 19px right 7px;
+    }
+  }
+
+  &__title {
+    @include h3;
+
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  &__button {
+    min-width: 176px;
+  }
+}
