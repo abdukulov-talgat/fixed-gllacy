@@ -32,6 +32,17 @@
     }
   }
 
+  &__tel {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $basic-neutral;
+    }
+  }
+
   &__span {
     @include signature;
 
