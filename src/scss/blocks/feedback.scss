@@ -1,0 +1,46 @@
+.feedback {
+  padding: 64px;
+  background-color: #efe3e2;
+  background-image: url("@img/bg-feedback.jpg");
+  background-repeat: no-repeat;
+  border-radius: 16px;
+
+  &__container {
+    width: 343px;
+    padding: 40px;
+    background-color: $basic-extra-light;
+    border-radius: 8px;
+  }
+
+  &__list {
+    margin: 0;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    @include h4;
+
+    margin: 0;
+    margin-bottom: 24px;
+    color: $basic-extra-dark;
+
+    &:last-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__span {
+    @include signature;
+
+    display: block;
+    color: $basic-dark;
+  }
+
+  &__button {
+    min-width: 250px;
+    min-height: 46px;
+  }
+}
