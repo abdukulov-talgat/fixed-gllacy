@@ -334,6 +334,7 @@ body {
     position: relative;
     width: 16px;
     height: 16px;
+    flex-shrink: 0;
     border: 1.33px solid $basic-extra-dark;
     margin-right: 8px;
     border-radius: 50%;
