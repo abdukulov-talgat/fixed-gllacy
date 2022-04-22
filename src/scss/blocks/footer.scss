@@ -1,6 +1,7 @@
 .footer {
   display: flex;
-  padding: 48px 0;
+  flex-shrink: 0;
+  padding: 48px;
 
   &__social {
     width: 370px;

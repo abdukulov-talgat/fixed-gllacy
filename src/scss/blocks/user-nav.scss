@@ -2,11 +2,14 @@
   @include reset-list;
 
   display: flex;
+  max-width: 360px;
   flex-shrink: 0;
   flex-wrap: wrap;
+  margin-bottom: -5px;
 
   &__item {
     position: relative;
+    margin-bottom: 5px;
   }
 
   &__item:not(:last-child) {

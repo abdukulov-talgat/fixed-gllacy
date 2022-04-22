@@ -1,6 +1,7 @@
 @use "sass:color";
 
 .header {
+  flex-shrink: 0;
   padding: 24px 0;
   margin-bottom: 21px;
 
