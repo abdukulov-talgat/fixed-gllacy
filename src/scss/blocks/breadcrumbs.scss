@@ -1,0 +1,45 @@
+.breadcrumbs {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 11px;
+
+  &__item:not(:last-child) {
+    padding-right: 29px;
+    background-image: url("@img/icons/icons.svg#chevrons");
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+  }
+
+  &__link {
+    @include signature-bold;
+
+    position: relative;
+    display: block;
+    color: $basic-extra-dark;
+    outline: none;
+    text-decoration: none;
+  }
+
+  &__link[href]:hover,
+  &__link[href]:focus {
+    color: rgba($basic-extra-light, 0.5);
+  }
+
+  &__link[href]::before {
+    position: absolute;
+    right: -1px;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: $basic-extra-dark;
+    content: "";
+  }
+
+  &__link[href]:hover::before,
+  &__link[href]:focus::before {
+    background-color: rgba($basic-extra-light, 0.5);
+  }
+}
