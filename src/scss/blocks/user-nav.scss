@@ -69,9 +69,15 @@
     }
 
     &--cart {
+      position: relative;
       background-image: url("@img/icons/icons.svg#cart");
       background-position: 16px 7px;
       background-size: 18px;
     }
   }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.user-nav__link--active.user-nav__link--cart {
+  background-image: url("@img/icons/icons.svg#cart-full");
 }
