@@ -6,6 +6,8 @@
   border-radius: 16px;
 
   &__container {
+    @include shadow-medium;
+
     width: 343px;
     padding: 40px;
     background-color: $basic-extra-light;
