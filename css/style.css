@@ -467,6 +467,8 @@ body {
   position: relative;
   width: 16px;
   height: 16px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   border: 1.33px solid #2d3440;
   margin-right: 8px;
   border-radius: 50%;
