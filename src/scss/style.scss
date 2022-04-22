@@ -2,7 +2,7 @@
 @import "./variables";
 @import "./mixins";
 @import "./common";
-@import "./blocks/cards.scss";
+@import "./blocks/cards";
 @import "./blocks/keyframes";
 @import "./blocks/social";
 @import "./blocks/site-nav";
@@ -17,3 +17,5 @@
 @import "./blocks/feedback";
 @import "./blocks/footer";
 @import "./blocks/breadcrumbs";
+@import "./blocks/filter";
+@import "./blocks/paginator";

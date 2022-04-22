@@ -2,7 +2,7 @@
   @include reset-list;
 
   display: grid;
-  gap: 30px;
+  gap: 40px 30px;
   grid-template-columns: repeat(auto-fit, 270px);
 
   &__item {
@@ -112,4 +112,8 @@
       background-color: $basic-neutral;
     }
   }
+}
+
+.catalog-cards {
+  margin-bottom: 57px;
 }

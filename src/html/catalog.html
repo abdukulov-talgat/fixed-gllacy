@@ -7,18 +7,331 @@
     <h1 class="visually-hidden">Глейси - онлайн и офлайн магазин мороженого</h1>
     @@include('./includes/header.html')
     <main class="main">
-     <h1 class="visually-hidden">gllacy - Магазин мороженого</h1>
-     <ul class="breadcrumbs">
-       <li class="breadcrumbs__item">
-         <a class="breadcrumbs__link" href="#">Главная</a>
-       </li>
-       <li class="breadcrumbs__item">
-         <a class="breadcrumbs__link" href="#">Каталог</a>
-       </li>
-       <li class="breadcrumbs__item">
-         <a class="breadcrumbs__link">Сливочное</a>
-       </li>
-     </ul>
+      <h1 class="visually-hidden">gllacy - Магазин мороженого</h1>
+      <ul class="breadcrumbs catalog-breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Каталог</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link">Сливочное</a>
+        </li>
+      </ul>
+      <h2 class="catalog-title">Сливочное мороженое</h2>
+      <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+        <div class="filter__row">
+          <div class="filter__column">
+            <span class="filter__title">Сортировка:</span>
+            <select class="select" name="order" aria-label="Сортировка">
+              <option value="price">по цене</option>
+              <option value="popular" selected>по популярности</option>
+            </select>
+          </div>
+          <div class="filter__column">
+            <span class="filter__title">Цена: <span class="filter__min-price">100</span> ₽ – <span class="filter__max-price">500</span> ₽</span>
+            <div class="range-slider">
+              <div class="range-slider__range">
+                <div class="range-slider__indicator" style="left: 20%; right: 36%;">
+                  <button class="range-slider__toggler range-slider__toggler--min" type="button" aria-label="Изменить мин. цену"></button>
+                  <button class="range-slider__toggler range-slider__toggler--max" type="button" aria-label="Изменить макс. цену"></button>
+                </div>
+              </div>
+              <input type="hidden" name="min-price" value="100">
+              <input type="hidden" name="max-price" value="150">
+            </div>
+          </div>
+          <div class="filter__column">
+            <span class="filter__title">Жирность:</span>
+            <div class="filter__bg">
+              <label class="control filter__control">
+                <input class="visually-hidden control__input" type="radio" name="richness" value="0" disabled>
+                <span class="control__mark"></span>
+                <span class="control__text">0%</span>
+              </label>
+              <label class="control filter__control">
+                <input class="visually-hidden control__input" type="radio" name="richness" value="10" checked disabled>
+                <span class="control__mark"></span>
+                <span class="control__text">до 10%</span>
+              </label>
+              <label class="control filter__control">
+                <input class="visually-hidden control__input" type="radio" name="richness" value="30">
+                <span class="control__mark"></span>
+                <span class="control__text">до 30%</span>
+              </label>
+              <label class="control filter__control">
+                <input class="visually-hidden control__input" type="radio" name="richness" value="100">
+                <span class="control__mark"></span>
+                <span class="control__text">выше 30%</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="filter__row">
+          <div class="filter__column">
+            <span class="filter__title">Наполнители:</span>
+            <div class="filter__bg">
+              <label class="control filter__control">
+                <input class="visually-hidden control__input" type="checkbox" name="chockolate" checked>
+                <span class="control__mark"></span>
+                <span class="control__text">шоколадные</span>
+              </label>
+              <label class="control filter__control filter__control--mr">
+                <input class="visually-hidden control__input" type="checkbox" name="sugar" checked disabled>
+                <span class="control__mark"></span>
+                <span class="control__text">сахарные посыпки</span>
+              </label>
+              <label class="control filter__control">
+                <input class="visually-hidden control__input" type="checkbox" name="fruit" disabled>
+                <span class="control__mark"></span>
+                <span class="control__text">фрукты</span>
+              </label>
+              <label class="control filter__control">
+                <input class="visually-hidden control__input" type="checkbox" name="syrup">
+                <span class="control__mark"></span>
+                <span class="control__text">сиропы</span>
+              </label>
+              <label class="control filter__control">
+                <input class="visually-hidden control__input" type="checkbox" name="jam">
+                <span class="control__mark"></span>
+                <span class="control__text">джемы</span>
+              </label>
+            </div>
+          </div>
+          <button class="filter__button" type="submit">Применить</button>
+        </div>
+      </form>
+      <ul class="cards catalog-cards">
+        <li class="cards__item">
+          <div class="cards__container">
+            <a class="cards__img-link" href="#"><img class="cards__img" src="@img/products/product-1.jpg" width="168" height="168" alt></a>
+            <a class="cards__link" href="#">
+              <h3 class="cards__title">Малинка</h3>
+            </a>
+            <p class="cards__text">Сливочное мороженое с малиновым джемом</p>
+            <p class="cards__row">
+              <b class="cards__price">310 ₽/кг</b>
+              <a class="cards__button" href="#" aria-label="В корзину">
+                <svg width="16" height="16">
+                  <use xlink:href="@img/icons/icons.svg#cart" />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="cards__container">
+            <a class="cards__img-link" href="#"><img class="cards__img" src="@img/products/product-2.jpg" width="168" height="168" alt></a>
+            <a class="cards__link" href="#">
+              <h3 class="cards__title">Фисташка</h3>
+            </a>
+            <p class="cards__text">Фисташковый пломбир с кусочками шоколада</p>
+            <p class="cards__row">
+              <b class="cards__price">340 ₽/кг</b>
+              <a class="cards__button" href="#" aria-label="В корзину">
+                <svg width="16" height="16">
+                  <use xlink:href="@img/icons/icons.svg#cart" />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="cards__container">
+            <a class="cards__img-link" href="#"><img class="cards__img" src="@img/products/product-3.jpg" width="168" height="168" alt></a>
+            <a class="cards__link" href="#">
+              <h3 class="cards__title">Черника</h3>
+            </a>
+            <p class="cards__text">Крем-брюле с черничным джемом</p>
+            <p class="cards__row">
+              <b class="cards__price">330 ₽/кг</b>
+              <a class="cards__button" href="#" aria-label="В корзину">
+                <svg width="16" height="16">
+                  <use xlink:href="@img/icons/icons.svg#cart" />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="cards__container">
+            <a class="cards__img-link" href="#"><img class="cards__img" src="@img/products/product-4.jpg" width="168" height="168" alt></a>
+            <a class="cards__link" href="#">
+              <h3 class="cards__title">Бабл-гам</h3>
+            </a>
+            <p class="cards__text">Ванильный пломбир со сладкой посыпкой</p>
+            <p class="cards__row">
+              <b class="cards__price">320 ₽/кг</b>
+              <a class="cards__button" href="#" aria-label="В корзину">
+                <svg width="16" height="16">
+                  <use xlink:href="@img/icons/icons.svg#cart" />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="cards__container">
+            <a class="cards__img-link" href="#"><img class="cards__img" src="@img/products/product-5.jpg" width="168" height="168" alt></a>
+            <a class="cards__link" href="#">
+              <h3 class="cards__title">Ежевика</h3>
+            </a>
+            <p class="cards__text">Сливочное мороженое с ежевичным джемом</p>
+            <p class="cards__row">
+              <b class="cards__price">330 ₽/кг</b>
+              <a class="cards__button" href="#" aria-label="В корзину">
+                <svg width="16" height="16">
+                  <use xlink:href="@img/icons/icons.svg#cart" />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="cards__container">
+            <a class="cards__img-link" href="#"><img class="cards__img" src="@img/products/product-6.jpg" width="168" height="168" alt></a>
+            <a class="cards__link" href="#">
+              <h3 class="cards__title">Банан</h3>
+            </a>
+            <p class="cards__text">Сливочный пломбир с банановым вкусом</p>
+            <p class="cards__row">
+              <b class="cards__price">340 ₽/кг</b>
+              <a class="cards__button" href="#" aria-label="В корзину">
+                <svg width="16" height="16">
+                  <use xlink:href="@img/icons/icons.svg#cart" />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="cards__container">
+            <a class="cards__img-link" href="#"><img class="cards__img" src="@img/products/product-7.jpg" width="168" height="168" alt></a>
+            <a class="cards__link" href="#">
+              <h3 class="cards__title">Шоколадка</h3>
+            </a>
+            <p class="cards__text">Классический шоколадный пломбир</p>
+            <p class="cards__row">
+              <b class="cards__price">270 ₽/кг</b>
+              <a class="cards__button" href="#" aria-label="В корзину">
+                <svg width="16" height="16">
+                  <use xlink:href="@img/icons/icons.svg#cart" />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="cards__container">
+            <a class="cards__img-link" href="#"><img class="cards__img" src="@img/products/product-8.jpg" width="168" height="168" alt></a>
+            <a class="cards__link" href="#">
+              <h3 class="cards__title">Клубничка</h3>
+            </a>
+            <p class="cards__text">Сливочный пломбир с клубничным вкусом</p>
+            <p class="cards__row">
+              <b class="cards__price">300 ₽/кг</b>
+              <a class="cards__button" href="#" aria-label="В корзину">
+                <svg width="16" height="16">
+                  <use xlink:href="@img/icons/icons.svg#cart" />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="cards__container">
+            <a class="cards__img-link" href="#"><img class="cards__img" src="@img/products/product-9.jpg" width="168" height="168" alt></a>
+            <a class="cards__link" href="#">
+              <h3 class="cards__title">Лимон</h3>
+            </a>
+            <p class="cards__text">Освежающий лимонный сорбет</p>
+            <p class="cards__row">
+              <b class="cards__price">310 ₽/кг</b>
+              <a class="cards__button" href="#" aria-label="В корзину">
+                <svg width="16" height="16">
+                  <use xlink:href="@img/icons/icons.svg#cart" />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="cards__container">
+            <a class="cards__img-link" href="#"><img class="cards__img" src="@img/products/product-10.jpg" width="168" height="168" alt></a>
+            <a class="cards__link" href="#">
+              <h3 class="cards__title">Ментол</h3>
+            </a>
+            <p class="cards__text">Сливочный пломбир с ментоловым сиропом</p>
+            <p class="cards__row">
+              <b class="cards__price">320 ₽/кг</b>
+              <a class="cards__button" href="#" aria-label="В корзину">
+                <svg width="16" height="16">
+                  <use xlink:href="@img/icons/icons.svg#cart" />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="cards__container">
+            <a class="cards__img-link" href="#"><img class="cards__img" src="@img/products/product-11.jpg" width="168" height="168" alt></a>
+            <a class="cards__link" href="#">
+              <h3 class="cards__title">Орешек</h3>
+            </a>
+            <p class="cards__text">Фисташковый пломбир с шоколадным сиропом</p>
+            <p class="cards__row">
+              <b class="cards__price">360 ₽/кг</b>
+              <a class="cards__button" href="#" aria-label="В корзину">
+                <svg width="16" height="16">
+                  <use xlink:href="@img/icons/icons.svg#cart" />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="cards__container">
+            <a class="cards__img-link" href="#"><img class="cards__img" src="@img/products/product-12.jpg" width="168" height="168" alt></a>
+            <a class="cards__link" href="#">
+              <h3 class="cards__title">Крем-брюле</h3>
+            </a>
+            <p class="cards__text">Классическое крем-брюле</p>
+            <p class="cards__row">
+              <b class="cards__price">280 ₽/кг</b>
+              <a class="cards__button" href="#" aria-label="В корзину">
+                <svg width="16" height="16">
+                  <use xlink:href="@img/icons/icons.svg#cart" />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div class="paginator-wrapper">
+        <button class="button catalog-button" type="button">Показать ещё</button>
+        <div class="paginator">
+          <a class="paginator__arrow paginator__arrow--prev"></a>
+          <ol class="paginator__list">
+            <li class="paginator__item">
+              <a class="paginator__link">1</a>
+            </li>
+            <li class="paginator__item">
+              <a class="paginator__link" href="#">2</a>
+            </li>
+            <li class="paginator__item">
+              <a class="paginator__link" href="#">3</a>
+            </li>
+            <li class="paginator__item">
+              <a class="paginator__link" href="#">4</a>
+            </li>
+            <li class="paginator__item">
+              <a class="paginator__link" href="#">5</a>
+            </li>
+          </ol>
+          <a class="paginator__arrow paginator__arrow--next" href="#"></a>
+        </div>
+      </div>
     </main>
     @@include('./includes/footer.html')
   </div>

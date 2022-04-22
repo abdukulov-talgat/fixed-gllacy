@@ -1,0 +1,77 @@
+.filter {
+  margin-bottom: 48px;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  &__row:last-child {
+    margin-bottom: 0;
+  }
+
+  &__column {
+    margin-right: 24px;
+  }
+
+  &__title {
+    @include signature;
+
+    display: block;
+    padding-left: 16px;
+    margin-bottom: 8px;
+    color: $basic-extra-dark;
+  }
+
+  &__bg {
+    display: flex;
+    padding: 8px 16px;
+    background-color: rgba($basic-extra-light, 0.3);
+    border-radius: 20px;
+  }
+
+  &__control {
+    margin-right: 17px;
+  }
+
+  &__control:last-child {
+    margin-right: 0;
+  }
+
+  &__control--mr {
+    margin-right: 25px;
+  }
+
+  &__button {
+    @include signature-bold;
+
+    min-width: 187px;
+    align-self: flex-end;
+    padding: 8px 16px;
+    border: 0;
+    background-color: rgba($basic-extra-light, 0.3);
+    border-radius: 20px;
+    color: $basic-extra-dark;
+    cursor: pointer;
+    font-family: inherit;
+    outline: 2px solid $basic-extra-light;
+    outline-offset: 0;
+
+    &:hover {
+      background-color: $basic-extra-light;
+      outline: 2px solid rgba($basic-extra-light, 0.3);
+    }
+
+    &:focus {
+      outline: 2px solid $basic-extra-dark;
+    }
+
+    &:disabled {
+      background-color: rgba($basic-extra-light, 0.3);
+      cursor: default;
+      opacity: 0.4;
+      outline: 2px solid $basic-extra-light;
+    }
+  }
+}
