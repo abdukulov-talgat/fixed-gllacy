@@ -421,6 +421,18 @@
   </div>
 </footer>
   </div>
+  <div class="modal-overlay"></div>
+  <div class="modal modal-feedback">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <b class="modal__title">Мы обязательно ответим вам!</b>
+    <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
+      <input class="input modal-feedback__input" type="text" name="username" placeholder="Имя и фамилия" aria-label="Ваше имя и фамилия">
+      <input class="input modal-feedback__input" type="email" name="email" placeholder="email@example.com" aria-label="Ваш e-mail">
+      <textarea class="textarea modal-feedback__textarea" placeholder="В свободной форме" aria-label="Дополнительная информация"></textarea>
+      <button class="button2 modal-feedback__button" type="submit">Отправить</button>
+    </form>
+    <button class="modal__close" type="button" aria-label="Закрыть окно"></button>
+  </div>
   <script src="js/script.min.js"></script>
 </body>
 
