@@ -18,6 +18,7 @@ function initModals() {
     document.querySelectorAll('.modal__close').forEach((c) => {
         c.addEventListener('click', () => {
             c.parentElement.classList.remove(modalOpen);
+            overlay.classList.remove(modalOpen);
         })
     });
 }
