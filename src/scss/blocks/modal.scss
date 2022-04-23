@@ -1,0 +1,88 @@
+.modal-overlay {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($basic-extra-dark, 0.3);
+}
+
+.modal {
+  @include shadow-big;
+
+  position: fixed;
+  z-index: 11;
+  top: 200px;
+  left: 50%;
+  display: none;
+  padding: 64px;
+  padding-top: 65px;
+  padding-bottom: 66px;
+  background-color: $basic-extra-light;
+  border-radius: 8px;
+  transform: translateX(-50%);
+
+  &__title {
+    @include h3;
+
+    display: block;
+    margin: 0;
+    margin-bottom: 31px;
+    color: $basic-extra-dark;
+  }
+
+  &__close {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    background-image: url("@img/icons/icons.svg#cross");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      outline: 1px solid $basic-extra-dark;
+    }
+  }
+}
+
+.modal-feedback {
+  width: 570px;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    // width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__textarea {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  &__button {
+    min-width: 152px;
+    align-self: flex-end;
+    margin-right: -2px;
+  }
+}
+
+.modal-open {
+  display: block;
+}

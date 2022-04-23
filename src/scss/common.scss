@@ -43,7 +43,8 @@ body {
   margin: 0 auto;
 }
 
-.input {
+.input,
+.textarea {
   @include p3;
 
   padding: 13px 15px;
@@ -80,6 +81,11 @@ body {
     border-color: $basic-neutral;
     background-color: $basic-light;
   }
+}
+
+.textarea {
+  height: 149px;
+  resize: none;
 }
 
 .button {
